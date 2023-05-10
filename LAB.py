@@ -1,13 +1,13 @@
 import cv2
 import numpy as np
 import dash
-from dash import html
-from dash import dcc
+import dash_html_components as html
+import dash_core_components as dcc
 from dash.dependencies import Input, Output, State
 import base64
 
 app = dash.Dash(__name__)
-
+server =app.server
 app.layout = html.Div([
     html.H1("LAB特征展示"),
     dcc.Upload(
@@ -79,4 +79,4 @@ def update_output_image_upload(contents):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True,port=8060)
+    app.run_server(debug=False)
