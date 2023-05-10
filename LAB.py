@@ -8,6 +8,7 @@ import base64
 
 app = dash.Dash(__name__)
 server =app.server
+
 app.layout = html.Div([
     html.H1("LAB特征展示"),
     dcc.Upload(
